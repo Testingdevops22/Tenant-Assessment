@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0",
+  "toolVersion": "0.1.0",
+  "generatedAtUtc": "2026-09-03T04:30:00Z",
+  "collectionProfile": "Full",
+  "graphContext": {
+    "tenantId": "00000000-0000-0000-0000-000000000001",
+    "account": "admin@contoso.example",
+    "authType": "Delegated"
+  },
+  "tenant": {
+    "organization": [
+      {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "displayName": "Contoso (Sample)",
+        "countryLetterCode": "US",
+        "onPremisesSyncEnabled": true
+      }
+    ],
+    "domains": [
+      { "id": "contoso.example", "isDefault": true, "isVerified": true },
+      { "id": "contoso.onmicrosoft.com", "isDefault": false, "isVerified": true }
+    ]
+  },
+  "licensing": {
+    "subscribedSkus": [
+      {
+        "skuId": "10000000-0000-0000-0000-000000000001",
+        "skuPartNumber": "SPE_E5",
+        "capabilityStatus": "Enabled",
+        "consumedUnits": 99,
+        "prepaidUnits": { "enabled": 100, "suspended": 0, "warning": 0 },
+        "servicePlans": []
+      }
+    ],
+    "users": [
+      {
+        "id": "20000000-0000-0000-0000-000000000001",
+        "displayName": "Adele Vance",
+        "userPrincipalName": "adele@contoso.example",
+        "userType": "Member",
+        "accountEnabled": true,
+        "usageLocation": "US",
+        "preferredDataLocation": "NAM",
+        "onPremisesSyncEnabled": true,
+        "assignedLicenses": [{ "skuId": "10000000-0000-0000-0000-000000000001", "disabledPlans": [] }],
+        "licenseAssignmentStates": [{ "skuId": "10000000-0000-0000-0000-000000000001", "state": "Active", "assignedByGroup": "30000000-0000-0000-0000-000000000001", "error": null }],
+        "signInActivity": { "lastSuccessfulSignInDateTime": "2026-08-30T10:00:00Z" }
+      },
+      {
+        "id": "20000000-0000-0000-0000-000000000002",
+        "displayName": "Diego Siciliani",
+        "userPrincipalName": "diego@contoso.example",
+        "userType": "Member",
+        "accountEnabled": true,
+        "usageLocation": null,
+        "preferredDataLocation": "EUR",
+        "onPremisesSyncEnabled": false,
+        "assignedLicenses": [{ "skuId": "10000000-0000-0000-0000-000000000001", "disabledPlans": [] }],
+        "licenseAssignmentStates": [{ "skuId": "10000000-0000-0000-0000-000000000001", "state": "ActiveWithError", "assignedByGroup": null, "error": "ProhibitedInUsageLocationViolation" }],
+        "signInActivity": { "lastSuccessfulSignInDateTime": "2025-12-01T08:00:00Z" }
+      },
+      {
+        "id": "20000000-0000-0000-0000-000000000003",
+        "displayName": "Former User",
+        "userPrincipalName": "former@contoso.example",
+        "userType": "Member",
+        "accountEnabled": false,
+        "usageLocation": "US",
+        "preferredDataLocation": null,
+        "onPremisesSyncEnabled": true,
+        "assignedLicenses": [{ "skuId": "10000000-0000-0000-0000-000000000001", "disabledPlans": [] }],
+        "licenseAssignmentStates": [{ "skuId": "10000000-0000-0000-0000-000000000001", "state": "Active", "assignedByGroup": null, "error": null }],
+        "signInActivity": null
+      }
+    ],
+    "groups": [
+      {
+        "id": "30000000-0000-0000-0000-000000000001",
+        "displayName": "All Employees Licensing",
+        "mail": "all@contoso.example",
+        "groupTypes": ["Unified"],
+        "preferredDataLocation": null,
+        "assignedLicenses": [{ "skuId": "10000000-0000-0000-0000-000000000001" }]
+      }
+    ]
+  },
+  "identity": {
+    "conditionalAccessPolicies": [
+      {
+        "id": "40000000-0000-0000-0000-000000000001",
+        "displayName": "MFA pilot",
+        "state": "enabledForReportingButNotEnforced",
+        "createdDateTime": "2026-01-10T00:00:00Z",
+        "modifiedDateTime": "2026-08-10T00:00:00Z",
+        "conditions": { "users": { "includeUsers": ["All"] }, "clientAppTypes": ["all"] },
+        "grantControls": { "builtInControls": ["mfa"], "operator": "OR" }
+      }
+    ],
+    "namedLocations": [],
+    "authenticationMethodsPolicy": [{ "id": "authenticationMethodsPolicy", "displayName": "Authentication Methods Policy" }],
+    "authorizationPolicy": [{ "id": "authorizationPolicy" }],
+    "roleDefinitions": [
+      { "id": "50000000-0000-0000-0000-000000000001", "displayName": "Global Administrator", "isBuiltIn": true, "isEnabled": true }
+    ],
+    "roleAssignments": [
+      { "id": "51000000-0000-0000-0000-000000000001", "principalId": "20000000-0000-0000-0000-000000000001", "roleDefinitionId": "50000000-0000-0000-0000-000000000001", "directoryScopeId": "/" }
+    ],
+    "applications": [
+      {
+        "id": "60000000-0000-0000-0000-000000000001",
+        "appId": "61000000-0000-0000-0000-000000000001",
+        "displayName": "Legacy Integration",
+        "passwordCredentials": [{ "displayName": "old secret", "endDateTime": "2026-08-01T00:00:00Z" }],
+        "keyCredentials": []
+      }
+    ],
+    "servicePrincipals": [],
+    "secureScores": [{ "currentScore": 52.4, "maxScore": 100, "createdDateTime": "2026-09-02T00:00:00Z" }]
+  },
+  "multiGeo": {
+    "exchange": {
+      "organization": [{ "Name": "Contoso", "DefaultMailboxRegion": "NAM", "AllowedMailboxRegions": ["NAM", "EUR"] }],
+      "mailboxes": [
+        { "DisplayName": "Adele Vance", "UserPrincipalName": "adele@contoso.example", "MailboxRegion": "NAM", "Database": "NAMPR01DG001-db001" },
+        { "DisplayName": "Diego Siciliani", "UserPrincipalName": "diego@contoso.example", "MailboxRegion": "NAM", "Database": "NAMPR01DG001-db002" }
+      ]
+    },
+    "sharePoint": {
+      "tenant": [{ "StorageQuota": 1048576, "StorageQuotaAllocated": 524288 }],
+      "geoStorageQuotas": [{ "GeoLocation": "NAM", "StorageQuota": 800000 }, { "GeoLocation": "EUR", "StorageQuota": 248576 }]
+    }
+  },
+  "collection": [
+    { "name": "Organization", "area": "Tenant", "endpoint": "/v1.0/organization", "permissions": ["Organization.Read.All"], "optional": false, "status": "Complete", "count": 1, "durationMs": 120, "error": null },
+    { "name": "Users and license assignments", "area": "Licensing", "endpoint": "/v1.0/users", "permissions": ["User.Read.All", "LicenseAssignment.Read.All"], "optional": false, "status": "Complete", "count": 3, "durationMs": 450, "error": null },
+    { "name": "Conditional Access policies", "area": "Compliance", "endpoint": "/v1.0/identity/conditionalAccess/policies", "permissions": ["Policy.Read.All"], "optional": false, "status": "Complete", "count": 1, "durationMs": 90, "error": null },
+    { "name": "Exchange Multi-Geo", "area": "Multi-Geo", "endpoint": "Exchange Online PowerShell", "permissions": ["View-Only Recipients", "View-Only Configuration"], "optional": true, "status": "Complete", "count": 2, "durationMs": 1500, "error": null }
+  ]
+}
